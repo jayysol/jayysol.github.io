@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header > div {
+    background-color: aquamarine;
+    position: fixed;
+}
+
+.desktopMenu {
+    background-color: blue;
+}
+
+#mobileMenu span {
+    text-decoration: none;
+    transition: color 1s ease-in, transform ease-in-out 0.3s;
+}
+
+#mobileMenu span:active {
+    transform: scale(0.95);
+}
+
+#mobileMenu {
+    /* background-color: blueviolet; */
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    text-align: end;
+    transform: translateY(-20vh);
+    /* z-index: 1; */
+}
+
+.mobileMenuNotVisible {
+    height: 0;
+    opacity: 0;
+    transform:translateX(100%);
+    transition: opacity 1s ease-in, transform 3s ease-in; 
+}
+
+.mobileMenuVisible {
+    position: fixed;
+    background-color:rgba(255, 0, 0, 0.7);
+    height: 120vh;
+    transform: translateX(0);
+    transition: opacity 1s ease-out, transform 1s ease-out; 
+}
+
+#menuButton {
+    position: fixed;
+    z-index: 2;
+}
+
+main {
+    text-align: center;
+}
+
+#heroSection {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.feature, #portfolioSection, #blogSection, #newsletterSection, #contactsSection {
+    height: 30vh;
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+}
